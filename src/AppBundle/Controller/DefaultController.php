@@ -18,4 +18,29 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+    
+    /**
+     * @Route("/user", name="testRoleUser")
+     */
+    public function testRoleUserAction(Request $request)
+    {
+        return $this->render('testROLES/role_user.html.twig');
+    }
+    
+    /**
+     * @Route("/admin", name="testRoleAdmin")
+     */
+    public function testRoleAdminAction(Request $request)
+    {
+        return $this->render('testROLES/role_admin.html.twig');
+    }   
+    
+    /**
+     * @Route("/sale", name="testRoleSale")
+     */
+    public function testRoleSaleAction(Request $request)
+    {
+        return $this->render('testROLES/role_sale.html.twig');
+    } 
+    
 }
